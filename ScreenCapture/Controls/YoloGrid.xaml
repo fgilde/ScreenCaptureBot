@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="WPFCaptureSample.Controls.YoloGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFCaptureSample.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <DataGrid x:Name="Imported" VerticalAlignment="Top" ItemsSource="{Binding Items}"  AutoGenerateColumns="False" CanUserResizeColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Type" Binding="{Binding Type}"/>
+                <!--<DataGridTextColumn Header="Confidence" Binding="{Binding Confidence}"/>-->
+                <DataGridTextColumn Header="X" Binding="{Binding X}"/>
+                <DataGridTextColumn Header="Y" Binding="{Binding Y}"/>
+                <DataGridTextColumn Header="Width" Binding="{Binding Width}"/>
+                <DataGridTextColumn Header="Height" Binding="{Binding Height}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
